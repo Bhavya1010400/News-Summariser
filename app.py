@@ -3,8 +3,7 @@ from groq import Groq
 import os
 import json
 import re
-import dotenv
-
+from dotenv import load_dotenv
 # Load environment variables
 dotenv.load_dotenv()
 groq_api = os.getenv("groq_api")
