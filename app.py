@@ -11,7 +11,7 @@ groq_api = os.getenv("groq_api")
 client = Groq(api_key=groq_api)
 
 # Initialize Flask app
-app = Flask(_name_)  
+app = Flask(__name__)  
 app.secret_key = 'your_secret_key_here'  # Needed for session
 
 
@@ -106,5 +106,5 @@ def index():
 
 
 # Start the app
-if _name_ == '_main_':  
+if __name__ == '__main__':  
     app.run(debug=False)
