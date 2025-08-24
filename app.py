@@ -3,14 +3,15 @@ from groq import Groq
 import os
 import json
 import re
-from dotenv import load_dotenv
+from dotenv import load_dotenv  
 # Load environment variables
-dotenv.load_dotenv()
+load_dotenv()
 groq_api = os.getenv("groq_api")
+
 client = Groq(api_key=groq_api)
 
 # Initialize Flask app
-app = Flask(__name__)
+app = Flask(_name_)  
 app.secret_key = 'your_secret_key_here'  # Needed for session
 
 
@@ -105,5 +106,5 @@ def index():
 
 
 # Start the app
-if __name__ == '__main__':
+if _name_ == '_main_':  
     app.run(debug=False)
